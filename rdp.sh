@@ -1,6 +1,6 @@
 sudo apt-get update
-sudo apt-get install xrdp
-sudo apt-get install xfce4
+sudo apt-get install xrdp -y
+sudo apt-get install xfce4 -y
 echo xfce4-session >~/.xsession
 sudo echo " 
 #!/bin/sh
