@@ -1,14 +1,8 @@
-sudo apt-get update
-sudo apt-get install xrdp -y
-sudo apt-get install xfce4 -y
-echo xfce4-session >~/.xsession
-sudo echo " 
-#!/bin/sh
-if [ -r /etc/default/locale ]; then
-  . /etc/default/locale
-  export LANG LANGUAGE
-fi" > /etc/xrdp/startwm.sh
-
-startxfce4
-sudo service xrdp restart
-hostname -I
+echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic universe" >> /etc/apt/sources.list
+apt-get update
+apt -y install vnc4server
+apt-get install xfce4 -y
+echo "xfce4-session" > ~/.xsession
+apt install firefox -y
+vncpasswd
+vncserver -geometry 1366x768
