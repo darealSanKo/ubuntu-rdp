@@ -1,0 +1,12 @@
+#!/bin/bash
+apt-get install -y xfce4 tightvncserver && apt-get update
+apt-get install xfce4 -y
+
+echo "xfce4-session" > ~/.xsession
+apt install firefox -y
+
+cd $HOME
+mkdir .vnc
+touch .vnc/xstartup
+echo "#!/bin/sh
+startxfce4 &" > ~/.vnc/xstartup
