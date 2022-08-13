@@ -1,10 +1,8 @@
-# ubuntu-rdp
+# ubuntu-remote-desktop
 ```
-wget https://raw.githubusercontent.com/raghost101/ubuntu-rdp/main/rdp.sh ; chmod +x rdp.sh ; ./rdp.sh
+wget https://raw.githubusercontent.com/0x-raafet/ubuntu-rdp/main/rdp ; chmod +x rdp ; ./rdp
 ```
-```
-startxfce4
-```
+Restart the machine
 ```
 vnceserver
 ```
