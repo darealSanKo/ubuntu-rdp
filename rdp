@@ -1,14 +1,14 @@
 #!/bin/bash
-apt-get install -y xfce4 tightvncserver wget && apt-get update
+apt-get install -y xfce4 tightvncserver wget xfce4-terminal && apt-get update
 apt-get install xfce4 -y
 echo "xfce4-session" > ~/.xsession
 apt install firefox -y
+apt update
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo su
 cd $HOME
 mkdir .vnc
 touch .vnc/xstartup
 echo "#!/bin/sh
 startxfce4 &" > ~/.vnc/xstartup
-apt-get update && apt upgrade -yy
